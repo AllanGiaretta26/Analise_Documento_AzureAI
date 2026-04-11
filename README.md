@@ -5,7 +5,6 @@
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-FF4B4B.svg)
 ![Azure](https://img.shields.io/badge/Azure-Document%20Intelligence-0078D4.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 ---
 
