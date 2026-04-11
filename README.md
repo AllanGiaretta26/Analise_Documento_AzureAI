@@ -21,7 +21,7 @@
 - [Campos Extraídos](#-campos-extraídos)
 - [Boas Práticas](#-boas-práticas)
 - [Screenshots](#-screenshots)
-- [Licença](#-licença)
+- [Autor](#-autor)
 
 ---
 
