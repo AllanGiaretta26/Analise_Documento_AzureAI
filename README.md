@@ -1,7 +1,8 @@
-# 📄 Azure Fake Docs — Validação de Cartões com Document Intelligence
+# 📄 Análise de Documento com Azure AI
 
-> App Streamlit que utiliza **Azure Document Intelligence** e **Azure Blob Storage** para validar e extrair dados de cartões de crédito a partir de imagens.
+> Validação automática de cartões de crédito com OCR e inteligência artificial.
 
+![Status](https://img.shields.io/badge/status-concluído-brightgreen)
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-FF4B4B.svg)
 ![Azure](https://img.shields.io/badge/Azure-Document%20Intelligence-0078D4.svg)
@@ -9,181 +10,222 @@
 
 ---
 
-## 📋 Índice
+## 📋 Sumário
 
-- [Sobre o Projeto](#-sobre-o-projeto)
-- [Funcionalidades](#-funcionalidades)
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [Pré-requisitos](#-pré-requisitos)
-- [Instalação e Configuração](#-instalação-e-configuração)
-- [Como Executar](#-como-executar)
-- [Fluxo da Aplicação](#-fluxo-da-aplicação)
-- [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Campos Extraídos](#-campos-extraídos)
-- [Boas Práticas](#-boas-práticas)
-- [Screenshots](#-screenshots)
+- [Descrição](#-descrição)
+- [O que este projeto resolve](#-o-que-este-projeto-resolve)
+- [Principais funcionalidades](#-principais-funcionalidades)
+- [Tecnologias](#-tecnologias)
+- [Como começar](#-como-começar)
+  - [Pré-requisitos](#pré-requisitos)
+  - [Instalação](#instalação)
+  - [Configuração](#configuração)
+  - [Executar](#executar)
+- [Estrutura do projeto](#-estrutura-do-projeto)
+- [Campos de dados extraídos](#-campos-de-dados-extraídos)
+- [Fluxo de funcionamento](#-fluxo-de-funcionamento)
+- [Guia de uso](#-guia-de-uso)
+- [Contribuição](#-contribuição)
 - [Licença](#-licença)
 
 ---
 
-## 🎯 Sobre o Projeto
+## 📖 Descrição
 
-O **Azure Fake Docs** é uma aplicação web construída com Streamlit que demonstra a integração com serviços cognitivos da Azure para extração automática de dados de cartões de crédito. O usuário envia uma imagem do cartão e o sistema realiza:
+O **Análise de Documento com Azure AI** é uma aplicação web moderna construída com **Streamlit** que integra serviços cognitivos da **Microsoft Azure** para extrair e validar dados de cartões de crédito através de análise de imagens.
 
-1. **Upload** para o Azure Blob Storage
-2. **Análise** com o modelo pré-construído `prebuilt-creditCard` do Document Intelligence
-3. **Exibição** dos campos extraídos com indicadores de validação
-
-Este projeto é ideal para desenvolvedores que desejam aprender a integrar serviços cognitivos da Azure em aplicações Python.
-
----
-
-## ✨ Funcionalidades
-
-- ✅ Upload de imagens (`.png`, `.jpg`, `.jpeg`) com limite de **8 MB**
-- ☁️ Upload automático para o **Azure Blob Storage**
-- 🧠 Extração inteligente com o modelo **`prebuilt-creditCard`** do Document Intelligence
-- 📊 Exibição de progresso e taxa de preenchimento dos campos
-- 🎨 Interface moderna com tema escuro e design responsivo
-- 🔍 Validação automática dos campos essenciais (nome e número do cartão)
-- 📋 Detalhes técnicos expansíveis, incluindo URL do blob e resposta JSON
+A aplicação demonstra como usar:
+- **Azure Document Intelligence** — Modelo pré-treinado `prebuilt-creditCard` para OCR e extração de dados estruturados
+- **Azure Blob Storage** — Armazenamento seguro de imagens na nuvem
+- **Python + Streamlit** — Interface web interativa e responsiva
 
 ---
 
-## 🛠 Tecnologias Utilizadas
+## 🎯 O que este projeto resolve
 
-| Tecnologia | Descrição |
-|------------|-----------|
-| **Python 3.8+** | Linguagem principal |
-| **Streamlit** | Framework para apps web interativos |
-| **Azure Blob Storage** | Armazenamento de arquivos na nuvem |
-| **Azure Document Intelligence** | Serviço de OCR e análise de documentos |
-| **python-dotenv** | Gerenciamento de variáveis de ambiente |
+Empresas e desenvolvedores frequentemente precisam validar e extrair dados de documentos (cartões, RG, comprovantes) de forma automática. Este projeto demonstra:
 
----
+✅ **Integração prática** com Azure Cognitive Services  
+✅ **Processamento de imagens** sem dependências locais complexas  
+✅ **Validação em tempo real** com feedback visual  
+✅ **Arquitetura modular** fácil de estender
 
-## 📦 Pré-requisitos
-
-Antes de começar, certifique-se de ter:
-
-- [Python 3.8+](https://www.python.org/downloads/) instalado
-- Uma conta **Azure** ativa ([crie gratuitamente aqui](https://azure.microsoft.com/free/))
-- Recurso **Azure Document Intelligence** criado no portal Azure
-- Recurso **Azure Storage Account** criado no portal Azure
+Ideal para **portfólio**, **aprendizado** ou **prototipagem rápida** de soluções document-heavy.
 
 ---
 
-## 🔧 Instalação e Configuração
+## ✨ Principais funcionalidades
 
-### 1. Clone o repositório
+| Funcionalidade | Descrição |
+|---|---|
+| **Upload seguro** | Aceita `.png`, `.jpg`, `.jpeg` com limite de 8 MB |
+| **Análise instantânea** | Extrai dados em segundos com modelo pré-treinado |
+| **Armazenamento em nuvem** | Salva imagens automaticamente no Azure Blob Storage |
+| **Validação inteligente** | Identifica campos preenchidos e essenciais automaticamente |
+| **Interface responsiva** | Design moderno com tema escuro e feedback visual |
+| **Detalhes técnicos** | Expande informações como URL do blob e resposta JSON bruta |
+
+---
+
+## 🛠 Tecnologias
+
+| Tecnologia | Versão | Função |
+|---|---|---|
+| **Python** | 3.8+ | Linguagem principal |
+| **Streamlit** | 1.28+ | Framework web |
+| **Azure Document Intelligence** | Latest | OCR e extração de dados |
+| **Azure Storage Blob** | Latest | Armazenamento em nuvem |
+| **python-dotenv** | Latest | Gerenciar variáveis de ambiente |
+
+---
+
+## 🚀 Como começar
+
+### Pré-requisitos
+
+- [Python 3.8+](https://www.python.org/downloads/)
+- Conta ativa no [Azure](https://azure.microsoft.com/free/) (gratuita)
+- Recurso **Azure Document Intelligence** criado
+- Recurso **Azure Storage Account** criado
+
+### Instalação
+
+1. **Clone o repositório**
 
 ```bash
-git clone https://github.com/seu-usuario/azure-fake-docs.git
-cd azure-fake-docs
+git clone https://github.com/AllanGiaretta26/Analise_Documento_AzureAI.git
+cd Analise_Documento_AzureAI
 ```
 
-### 2. Instale as dependências
+2. **Instale as dependências**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Configure as variáveis de ambiente
+### Configuração
 
-Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
+1. **Crie um arquivo `.env`** na raiz do projeto:
 
 ```env
 # Azure Document Intelligence
-ENDPOINT="https://<seu-endpoint>.cognitiveservices.azure.com/"
-SUBSCRIPTION_KEY="<sua-chave-de-assinatura>"
+ENDPOINT="https://<seu-recurso>.cognitiveservices.azure.com/"
+SUBSCRIPTION_KEY="<sua-chave-primária>"
 
-# Azure Blob Storage
-AZURE_STORAGE_CONNECTION_STRING="<sua-connection-string>"
+# Azure Storage Account
+AZURE_STORAGE_CONNECTION_STRING="DefaultEndpointsProtocol=https;AccountName=<seu-account>;..."
 CONTAINER_NAME="cartoes"
 ```
 
-> **⚠️ Importante:** Nunca versione o arquivo `.env` com credenciais reais. Ele já está listado no `.gitignore`.
+2. **Obtenha as credenciais**:
 
-### 📍 Como obter as credenciais no Portal Azure
+| Serviço | Onde encontrar |
+|---|---|
+| Document Intelligence | Portal Azure > Seu recurso > Keys and Endpoint |
+| Storage Account | Portal Azure > Seu recurso > Access keys > Connection string |
 
-1. **Document Intelligence**: Acesse o recurso > **Keys and Endpoint** > copie o endpoint e uma das chaves
-2. **Storage Account**: Acesse o recurso > **Access keys** > copie a connection string
+> ⚠️ **Importante**: O `.env` está no `.gitignore`. Nunca versione credenciais reais.
 
----
-
-## 🚀 Como Executar
-
-Após configurar o ambiente, inicie o app:
+### Executar
 
 ```bash
 streamlit run src/app.py
 ```
 
-A aplicação será aberta automaticamente no navegador em `http://localhost:8501`.
+A aplicação abrirá automaticamente em `http://localhost:8501`.
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Estrutura do projeto
 
 ```
-DOCS/
+Analise_Documento_AzureAI/
 ├── src/
-│   ├── app.py                          # App principal (Streamlit UI)
+│   ├── app.py                          # Aplicação Streamlit (UI + orquestração)
 │   ├── services/
-│   │   ├── blob_service.py             # Serviço de upload para Blob Storage
-│   │   └── credit_card_service.py      # Serviço de análise com Document Intelligence
+│   │   ├── blob_service.py             # Upload para Azure Blob Storage
+│   │   └── credit_card_service.py      # Análise com Document Intelligence
 │   └── utils/
-│       └── Config.py                   # Gerenciamento de variáveis de ambiente
-├── images/                             # Screenshots da aplicação
+│       └── Config.py                   # Carregamento de variáveis de ambiente
+├── images/                             # Screenshots
 ├── requirements.txt                    # Dependências Python
-├── .gitignore                          # Arquivos ignorados pelo Git
+├── .gitignore                          # Arquivo padrão
 └── README.md                           # Esta documentação
 ```
 
-### Descrição dos módulos
+### Responsabilidades dos módulos
 
-| Arquivo | Responsabilidade |
-|---------|------------------|
-| `app.py` | Interface do usuário, validação de arquivos e orquestração do fluxo |
-| `services/blob_service.py` | Conexão e upload para o Azure Blob Storage |
-| `services/credit_card_service.py` | Chamada ao Document Intelligence e extração de campos |
-| `utils/Config.py` | Leitura e validação de variáveis de ambiente |
-
----
-
-## 💳 Campos Extraídos
-
-O modelo `prebuilt-creditCard` extrai os seguintes campos:
-
-| Campo | Descrição | Exemplo |
-|-------|-----------|---------|
-| **card_name** | Nome do titular do cartão | `JOAO DA SILVA` |
-| **card_number** | Número do cartão | `1234 5678 9012 3456` |
-| **bank_name** | Banco/Instituição emissora | `BANCO EXEMPLO S.A.` |
-| **expiry_date** | Data de validade | `12/28` |
-
-> A validação do cartão considera os campos `card_name` e `card_number` como essenciais.
+| Módulo | O que faz |
+|---|---|
+| **app.py** | Interface do usuário, validação de arquivo, orquestração do pipeline |
+| **blob_service.py** | Conexão e upload de imagens para Azure Blob Storage |
+| **credit_card_service.py** | Chamada ao Document Intelligence, parsing de resposta |
+| **Config.py** | Leitura segura de variáveis de ambiente com validação |
 
 ---
 
-## 📸 Screenshots
+## 💳 Campos de dados extraídos
 
-### Etapa 1: Upload e validação inicial
-![Tela do app - upload](images/Captura%20de%20tela%202026-02-09%20081630.png)
+O modelo pré-treinado `prebuilt-creditCard` extrai automaticamente:
+
+| Campo | Exemplo | Status |
+|---|---|---|
+| **card_name** | `JOAO DA SILVA` | Obrigatório ✓ |
+| **card_number** | `1234 5678 9012 3456` | Obrigatório ✓ |
+| **bank_name** | `BANCO EXEMPLO S.A.` | Opcional |
+| **expiry_date** | `12/28` | Opcional |
+
+---
+
+## 🔄 Fluxo de funcionamento
+
+```
+Usuário upload imagem
+        ↓
+Validação local (tipo, tamanho)
+        ↓
+Upload para Azure Blob Storage
+        ↓
+Análise com Document Intelligence
+        ↓
+Extração de campos estruturados
+        ↓
+Exibição e validação no Streamlit
+```
+
+1. Usuário seleciona e envia imagem do cartão
+2. Sistema valida formato e tamanho localmente
+3. Imagem é armazenada no Azure Blob Storage
+4. Document Intelligence analisa e extrai campos
+5. Campos são exibidos com indicadores visuais
+
+---
+
+## 📸 Guia de uso
+
+### Etapa 1: Upload da imagem
+
+![Upload](images/Captura%20de%20tela%202026-02-09%20081630.png)
+
+- Selecione uma imagem clara do cartão de crédito
+- Certifique-se que todos os dados visíveis estão bem nítidos
+- Tamanho máximo: 8 MB
 
 ### Etapa 2: Resultados da análise
-![Tela do app - resultado](images/Captura%20de%20tela%202026-02-09%20081745.png)
+
+![Resultados](images/Captura%20de%20tela%202026-02-09%20081745.png)
+
+- Campos são exibidos conforme extraídos
+- Verde = campo validado
+- Vermelho = campo ausente ou inválido
+- Expanda "Detalhes técnicos" para ver resposta JSON bruta
 
 ---
 
-## 🛡️ Boas Práticas
+## 📄 Licença
 
-- 🔒 **Segurança**: Nunca compartilhe ou versione arquivos com credenciais
-- 📷 **Qualidade da imagem**: Use fotos nítidas, bem iluminadas e sem reflexos
-- 📏 **Tamanho do arquivo**: Mantenha as imagens abaixo de 8 MB para melhor performance
-- 🧪 **Testes**: Verifique as variáveis de ambiente com o indicator na sidebar antes de usar
+Este projeto está sob a licença **MIT**. Veja [LICENSE](LICENSE) para detalhes.
 
 ---
 
-## 🧑‍💻 Autor
-Desenvolvido por Allan Giaretta
+Desenvolvido por Allan Giaretta.
