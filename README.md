@@ -18,7 +18,7 @@ Ideal para portfólio, aprendizado de Azure Cognitive Services e prototipagem r�
 
 ![Status](https://img.shields.io/badge/status-conclu%C3%ADdo-brightgreen)
 
-Projeto concluído e funcional. Aceita melhorias e novas integrações via *pull request*.
+Projeto concluído e funcional. 
 
 ## Funcionalidades
 
@@ -146,14 +146,6 @@ Exibição dos campos extraídos no Streamlit
 **Etapa 2 — Resultado da análise**
 
 ![Resultados](images/Captura%20de%20tela%202026-02-09%20081745.png)
-
-## Como Contribuir
-
-1. Faça um *fork* do repositório
-2. Crie uma branch para sua feature: `git checkout -b feature/minha-feature`
-3. Faça commit das alterações: `git commit -m "feat: adiciona minha feature"`
-4. Envie para o seu fork: `git push origin feature/minha-feature`
-5. Abra um *pull request*
 
 ## Licença
 
