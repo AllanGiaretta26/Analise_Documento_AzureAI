@@ -1,128 +1,72 @@
-# 📄 Análise de Documento com Azure AI
+# Análise de Documento com Azure AI
 
-> Validação automática de cartões de crédito com OCR e inteligência artificial.
-
-![Status](https://img.shields.io/badge/status-concluído-brightgreen)
+![Status](https://img.shields.io/badge/status-conclu%C3%ADdo-brightgreen)
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-FF4B4B.svg)
 ![Azure](https://img.shields.io/badge/Azure-Document%20Intelligence-0078D4.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
----
+> Validação automática de cartões de crédito com OCR e inteligência artificial da Microsoft Azure.
 
-## 📋 Sumário
+## Descrição
 
-- [Sobre o Projeto](#-sobre-o-projeto)
-- [Funcionalidades](#-funcionalidades)
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [Pré-requisitos](#-pré-requisitos)
-- [Instalação e Configuração](#-instalação-e-configuração)
-- [Como Executar](#-como-executar)
-- [Fluxo da Aplicação](#-fluxo-da-aplicação)
-- [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Campos Extraídos](#-campos-extraídos)
-- [Boas Práticas](#-boas-práticas)
-- [Screenshots](#-screenshots)
-- [Licença](#-licença)
+Aplicação web construída com **Streamlit** que integra serviços cognitivos da **Microsoft Azure** para extrair e validar dados de cartões de crédito a partir de imagens. O projeto demonstra, em uma arquitetura modular e enxuta, como combinar **Azure Document Intelligence** (modelo pré-treinado `prebuilt-creditCard`) com **Azure Blob Storage** para resolver um problema recorrente: validar e extrair dados de documentos de forma automática, sem depender de bibliotecas locais de OCR.
 
----
+Ideal para portfólio, aprendizado de Azure Cognitive Services e prototipagem rápida de soluções *document-heavy*.
 
-## 📖 Descrição
+## Status do Projeto
 
-O **Análise de Documento com Azure AI** é uma aplicação web moderna construída com **Streamlit** que integra serviços cognitivos da **Microsoft Azure** para extrair e validar dados de cartões de crédito através de análise de imagens.
+![Status](https://img.shields.io/badge/status-conclu%C3%ADdo-brightgreen)
 
-A aplicação demonstra como usar:
-- **Azure Document Intelligence** — Modelo pré-treinado `prebuilt-creditCard` para OCR e extração de dados estruturados
-- **Azure Blob Storage** — Armazenamento seguro de imagens na nuvem
-- **Python + Streamlit** — Interface web interativa e responsiva
+Projeto concluído e funcional. Aceita melhorias e novas integrações via *pull request*.
 
----
-
-## 🎯 O que este projeto resolve
-
-Empresas e desenvolvedores frequentemente precisam validar e extrair dados de documentos (cartões, RG, comprovantes) de forma automática. Este projeto demonstra:
-
-✅ **Integração prática** com Azure Cognitive Services  
-✅ **Processamento de imagens** sem dependências locais complexas  
-✅ **Validação em tempo real** com feedback visual  
-✅ **Arquitetura modular** fácil de estender
-
-Ideal para **portfólio**, **aprendizado** ou **prototipagem rápida** de soluções document-heavy.
-
----
-
-## ✨ Principais funcionalidades
+## Funcionalidades
 
 | Funcionalidade | Descrição |
 |---|---|
-| **Upload seguro** | Aceita `.png`, `.jpg`, `.jpeg` com limite de 8 MB |
-| **Análise instantânea** | Extrai dados em segundos com modelo pré-treinado |
-| **Armazenamento em nuvem** | Salva imagens automaticamente no Azure Blob Storage |
-| **Validação inteligente** | Identifica campos preenchidos e essenciais automaticamente |
-| **Interface responsiva** | Design moderno com tema escuro e feedback visual |
-| **Detalhes técnicos** | Expande informações como URL do blob e resposta JSON bruta |
+| Upload validado | Aceita `.png`, `.jpg`, `.jpeg` com limite de 8 MB |
+| Análise com IA | Extrai dados em segundos com modelo pré-treinado da Azure |
+| Armazenamento em nuvem | Salva imagens automaticamente no Azure Blob Storage |
+| Validação visual | Indica campos obrigatórios preenchidos e taxa de completude |
+| Interface responsiva | Tema escuro com tipografia Space Grotesk e feedback em tempo real |
+| Detalhes técnicos | Expande a URL do blob e a resposta JSON bruta da API |
 
----
-
-## 🛠 Tecnologias
+## Tecnologias
 
 | Tecnologia | Versão | Função |
 |---|---|---|
-| **Python** | 3.8+ | Linguagem principal |
-| **Streamlit** | 1.28+ | Framework web |
-| **Azure Document Intelligence** | Latest | OCR e extração de dados |
-| **Azure Storage Blob** | Latest | Armazenamento em nuvem |
-| **python-dotenv** | Latest | Gerenciar variáveis de ambiente |
+| ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white) | 3.8+ | Linguagem principal |
+| ![Streamlit](https://img.shields.io/badge/-Streamlit-FF4B4B?logo=streamlit&logoColor=white) | 1.28+ | Framework web |
+| ![Azure](https://img.shields.io/badge/-Document%20Intelligence-0078D4?logo=microsoftazure&logoColor=white) | latest | OCR e extração de dados |
+| ![Azure Blob](https://img.shields.io/badge/-Blob%20Storage-0078D4?logo=microsoftazure&logoColor=white) | latest | Armazenamento em nuvem |
+| ![dotenv](https://img.shields.io/badge/-python--dotenv-ECD53F?logo=dotenv&logoColor=black) | latest | Variáveis de ambiente |
 
----
-
-## 🚀 Como começar
+## Como Instalar e Rodar
 
 ### Pré-requisitos
 
 - [Python 3.8+](https://www.python.org/downloads/)
-- Conta ativa no [Azure](https://azure.microsoft.com/free/) (gratuita)
-- Recurso **Azure Document Intelligence** criado
-- Recurso **Azure Storage Account** criado
+- Conta ativa no [Azure](https://azure.microsoft.com/free/)
+- Recurso **Azure Document Intelligence** provisionado
+- Recurso **Azure Storage Account** provisionado
 
 ### Instalação
 
-1. **Clone o repositório**
-
 ```bash
+# Clone o repositório
 git clone https://github.com/AllanGiaretta26/Analise_Documento_AzureAI.git
 cd Analise_Documento_AzureAI
-```
 
-2. **Instale as dependências**
+# (Opcional) crie e ative um ambiente virtual
+python -m venv .venv
+.venv\Scripts\activate     # Windows
+source .venv/bin/activate  # Linux / macOS
 
-```bash
+# Instale as dependências
 pip install -r requirements.txt
 ```
 
-### Configuração
-
-1. **Crie um arquivo `.env`** na raiz do projeto:
-
-```env
-# Azure Document Intelligence
-ENDPOINT="https://<seu-recurso>.cognitiveservices.azure.com/"
-SUBSCRIPTION_KEY="<sua-chave-primária>"
-
-# Azure Storage Account
-AZURE_STORAGE_CONNECTION_STRING="DefaultEndpointsProtocol=https;AccountName=<seu-account>;..."
-CONTAINER_NAME="cartoes"
-```
-
-2. **Obtenha as credenciais**:
-
-| Serviço | Onde encontrar |
-|---|---|
-| Document Intelligence | Portal Azure > Seu recurso > Keys and Endpoint |
-| Storage Account | Portal Azure > Seu recurso > Access keys > Connection string |
-
-> ⚠️ **Importante**: O `.env` está no `.gitignore`. Nunca versione credenciais reais.
-
-### Executar
+### Execução
 
 ```bash
 streamlit run src/app.py
@@ -130,98 +74,91 @@ streamlit run src/app.py
 
 A aplicação abrirá automaticamente em `http://localhost:8501`.
 
----
+## Variáveis de Ambiente
 
-## 📁 Estrutura do projeto
+Crie um arquivo `.env` na raiz do projeto com as chaves abaixo:
+
+```env
+ENDPOINT=
+SUBSCRIPTION_KEY=
+AZURE_STORAGE_CONNECTION_STRING=
+CONTAINER_NAME=
+```
+
+| Variável | Onde encontrar |
+|---|---|
+| `ENDPOINT` | Portal Azure → Document Intelligence → *Keys and Endpoint* |
+| `SUBSCRIPTION_KEY` | Portal Azure → Document Intelligence → *Keys and Endpoint* |
+| `AZURE_STORAGE_CONNECTION_STRING` | Portal Azure → Storage Account → *Access keys* → *Connection string* |
+| `CONTAINER_NAME` | Nome do container criado no Storage Account (ex: `cartoes`) |
+
+> O `.env` está no `.gitignore`. Nunca versione credenciais reais.
+
+## Estrutura do Projeto
 
 ```
 Analise_Documento_AzureAI/
 ├── src/
-│   ├── app.py                          # Aplicação Streamlit (UI + orquestração)
+│   ├── app.py                       # Interface Streamlit e orquestração do pipeline
 │   ├── services/
-│   │   ├── blob_service.py             # Upload para Azure Blob Storage
-│   │   └── credit_card_service.py      # Análise com Document Intelligence
+│   │   ├── blob_service.py          # Upload de imagens para Azure Blob Storage
+│   │   └── credit_card_service.py   # Análise com Azure Document Intelligence
 │   └── utils/
-│       └── Config.py                   # Carregamento de variáveis de ambiente
-├── images/                             # Screenshots
-├── requirements.txt                    # Dependências Python
-├── .gitignore                          # Arquivo padrão
-└── README.md                           # Esta documentação
+│       └── Config.py                # Carregamento e validação de variáveis de ambiente
+├── images/                          # Screenshots da aplicação
+├── requirements.txt                 # Dependências Python
+└── README.md
 ```
 
-### Responsabilidades dos módulos
+## Campos Extraídos
 
-| Módulo | O que faz |
-|---|---|
-| **app.py** | Interface do usuário, validação de arquivo, orquestração do pipeline |
-| **blob_service.py** | Conexão e upload de imagens para Azure Blob Storage |
-| **credit_card_service.py** | Chamada ao Document Intelligence, parsing de resposta |
-| **Config.py** | Leitura segura de variáveis de ambiente com validação |
+O modelo `prebuilt-creditCard` retorna automaticamente:
 
----
-
-## 💳 Campos de dados extraídos
-
-O modelo pré-treinado `prebuilt-creditCard` extrai automaticamente:
-
-| Campo | Exemplo | Status |
+| Campo | Exemplo | Obrigatório |
 |---|---|---|
-| **card_name** | `JOAO DA SILVA` | Obrigatório ✓ |
-| **card_number** | `1234 5678 9012 3456` | Obrigatório ✓ |
-| **bank_name** | `BANCO EXEMPLO S.A.` | Opcional |
-| **expiry_date** | `12/28` | Opcional |
+| `card_name` | `JOAO DA SILVA` | Sim |
+| `card_number` | `1234 5678 9012 3456` | Sim |
+| `bank_name` | `BANCO EXEMPLO S.A.` | Não |
+| `expiry_date` | `12/28` | Não |
 
----
+A validação considera o cartão **válido** quando `card_name` e `card_number` estão presentes.
 
-## 🔄 Fluxo de funcionamento
+## Fluxo da Aplicação
 
 ```
-Usuário upload imagem
-        ↓
-Validação local (tipo, tamanho)
-        ↓
+Upload da imagem
+       ↓
+Validação local (tipo e tamanho)
+       ↓
 Upload para Azure Blob Storage
-        ↓
+       ↓
 Análise com Document Intelligence
-        ↓
-Extração de campos estruturados
-        ↓
-Exibição e validação no Streamlit
+       ↓
+Exibição dos campos extraídos no Streamlit
 ```
 
-1. Usuário seleciona e envia imagem do cartão
-2. Sistema valida formato e tamanho localmente
-3. Imagem é armazenada no Azure Blob Storage
-4. Document Intelligence analisa e extrai campos
-5. Campos são exibidos com indicadores visuais
+## Screenshots
 
----
-
-## 📸 Guia de uso
-
-### Etapa 1: Upload da imagem
+**Etapa 1 — Upload da imagem**
 
 ![Upload](images/Captura%20de%20tela%202026-02-09%20081630.png)
 
-- Selecione uma imagem clara do cartão de crédito
-- Certifique-se que todos os dados visíveis estão bem nítidos
-- Tamanho máximo: 8 MB
-
-### Etapa 2: Resultados da análise
+**Etapa 2 — Resultado da análise**
 
 ![Resultados](images/Captura%20de%20tela%202026-02-09%20081745.png)
 
-- Campos são exibidos conforme extraídos
-- Verde = campo validado
-- Vermelho = campo ausente ou inválido
-- Expanda "Detalhes técnicos" para ver resposta JSON bruta
+## Como Contribuir
+
+1. Faça um *fork* do repositório
+2. Crie uma branch para sua feature: `git checkout -b feature/minha-feature`
+3. Faça commit das alterações: `git commit -m "feat: adiciona minha feature"`
+4. Envie para o seu fork: `git push origin feature/minha-feature`
+5. Abra um *pull request*
+
+## Licença
+
+Distribuído sob a licença **MIT**. Veja [LICENSE](LICENSE) para detalhes.
 
 ---
 
-## 📄 Licença
-
-Este projeto está sob a licença **MIT**. Veja [LICENSE](LICENSE) para detalhes.
-
----
-
-Desenvolvido por Allan Giaretta.
+Desenvolvido por [Allan Giaretta](https://github.com/AllanGiaretta26).
