@@ -6,26 +6,22 @@
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-FF4B4B.svg)
 ![Azure](https://img.shields.io/badge/Azure-Document%20Intelligence-0078D4.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 ---
 
 ## 📋 Sumário
 
-- [Descrição](#-descrição)
-- [O que este projeto resolve](#-o-que-este-projeto-resolve)
-- [Principais funcionalidades](#-principais-funcionalidades)
-- [Tecnologias](#-tecnologias)
-- [Como começar](#-como-começar)
-  - [Pré-requisitos](#pré-requisitos)
-  - [Instalação](#instalação)
-  - [Configuração](#configuração)
-  - [Executar](#executar)
-- [Estrutura do projeto](#-estrutura-do-projeto)
-- [Campos de dados extraídos](#-campos-de-dados-extraídos)
-- [Fluxo de funcionamento](#-fluxo-de-funcionamento)
-- [Guia de uso](#-guia-de-uso)
-- [Contribuição](#-contribuição)
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Funcionalidades](#-funcionalidades)
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Pré-requisitos](#-pré-requisitos)
+- [Instalação e Configuração](#-instalação-e-configuração)
+- [Como Executar](#-como-executar)
+- [Fluxo da Aplicação](#-fluxo-da-aplicação)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Campos Extraídos](#-campos-extraídos)
+- [Boas Práticas](#-boas-práticas)
+- [Screenshots](#-screenshots)
 - [Licença](#-licença)
 
 ---
